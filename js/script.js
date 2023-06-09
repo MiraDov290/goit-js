@@ -2,13 +2,21 @@
 //    Якщо користувач вводить "ECMAScript", то показати за допомогою alert("Вірно!")
 //    У інших випадках показати "Не знаєте? ECMAScript!"
 
+//const guestion = promt("Яка офіційна назва JavaScript?".);
+//console.log(guestion);
+
+//if (guestion.toLowerCase() === "ECMAScript.toLowerCase()") {
+   // alert("Вірно!");
+//} else {
+    //alert "Не знаєте? ECMAScript!";
+//}
+
 
 
 
 //  Напишіть програму, яка отримає від користувача число(кількість хвилин)
 // і виведе у консоль рядок у форматі годин та хвилин
 // 70 === 01: 10
-
 
 //const globalMinutes = 90
 
@@ -99,3 +107,141 @@
 
 // У змінній  min лежить число від 0 до 59.
 // Потрібно визначити, в яку чтверть години потрапить це число(в першу, другу, третю або четверту)
+
+//var min = 10;
+//if (min >= 0 && min <= 14) {
+//alert ( 'В першу чверть.');
+//}
+//if (min >= 15 && min <= 30) {
+//alert ( 'У другу чверть.');
+//}
+//if (min >= 31 && min <= 45) {
+//alert ( 'В третю чверть.');
+//}
+//if (min >= 46 && min <= 59) {
+//alert ( 'В четверту чверть.');
+//}
+
+
+
+// todo Напиши скрипт, який для об'єкта user послідовно:
+//   - додасть поле mod зі значенням 'happy'
+//   - замінить hobby на 'skydiving'
+//   - замінить значення premium на false
+//   - виводить вміст об'єкта user у форматі ключ:значення,
+// використовуючи Object.keys() и for...of
+
+//const user = {
+  //name: 'John',
+  //age: 20,
+  //hobby: 'tenis',
+  //premium: true,
+//}
+
+
+
+
+
+// todo У нас є об'єкт, у якому зберігаються заробітні плати команди.
+// Напишіть код для отримання суми усіх зарплат і збережіть його результат у змінній sum
+// Якщо об'єкт salaries порожній, то результат повинен бути 0
+
+//const salaries = {
+  //Mango: 100,
+  //Poly: 160,
+  //Ajax: 1470,
+//}
+
+
+
+
+
+// todo Напишіть функцію calcTotalPrice(stones, stonesName), яка приймає масив об'єктів та рядок із назвою каменя.
+// Функція рахує і повертає загальну вартість каменів з таким іменем, ціною та кількістю з об'єкта
+
+//const stonesArray = [
+  //{ name: 'Изумруд', price: 1300, quantity: 4 },
+  //{ name: 'Бриллиант', price: 2700, quantity: 6 },
+  //{ name: 'Сапфир', price: 400, quantity: 7 },
+  //{ name: 'Щебень', price: 150, quantity: 100 },
+//]
+
+
+
+
+
+
+// todo Створіть об'єкт calculator із трьома методами
+// read(a, b) - приймає два аргументи і зберігає їх як властивості об'єкта
+// sum() повертає суму збережених значень
+// mult() помножує збережені значення і повертає результат
+
+//const calculator = {
+    //read(a, b) {
+       // this.a = a;
+        //this.b = b;
+   // },
+
+    //sum() {
+       // return this.a + this.b;
+    //},
+
+    //mult() {
+        //return this.a * this.b;
+    //}
+//}
+
+//calculator.read(7, 5);
+//console.log(calculator.sum());
+//console.log(calculator.mult());
+
+
+
+
+
+
+
+// todo Напишіть функцію updateObject, яка приймає об'єкт і повертає новий об'єкт без вказаних параметрів
+// Результат, що очікується ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+
+//function updateObject(obj1, ...arr) {
+    //const newObj = {};
+    //for (const key of Object.keys(obj1)) {
+        //if (!arr.includes(key)) {
+           // newObj[key] = obj1[key]
+        //}
+    //}
+    //return newObj;
+//}
+//console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'))
+
+
+
+
+
+//const arrNumber = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+// Напишіть функцію, яка розвертає масив у зворотньому напрямку.Метод reverse() не використовувати
+
+
+
+
+
+
+// Напишіть функцію, яка очистить масив від небажаних значень, таких як false, undefined, порожні рядки, нуль, null
+// Результат, що очікується[0, 1, false, 2, undefined, '', 3, null] => [1, 2, 3]
+
+function filterRangeInPlace(arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+        let val = arr[i];
+
+        if (!val) {
+            arr.splice(i, 1);
+            i -= 1;
+        } 
+    }
+    return arr;
+}
+
+const arr = [0, 1, false, 2, undefined, '', 3, null]
+console.log(filterRangeInPlace(arr));
